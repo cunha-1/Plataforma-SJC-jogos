@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+/* Banner de Frases */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: #104147;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.banner .slide {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transition: top 1s, opacity 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner .slide.active {
+    top: 0;
+    opacity: 1;
+}
+
+/* Estilo dos Containers dos Jogos */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.game-box {
+    width: 350px;
+    height: 250px;
+    background-color: #00bcd4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #0288d1;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+}
+
+.game-box img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.game-box p {
+    margin-top: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #104147;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

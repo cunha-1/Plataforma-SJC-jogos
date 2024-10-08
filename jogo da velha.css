@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, rgb(251, 255, 2) 0%, rgb(1, 111, 255) 100%);
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.board {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+/* X */
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    background: white;
+    position: absolute;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+/* Circle */
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::after,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+    content: "";
+    height: calc(100px * 0.9);
+    width: calc(100px * 0.9);
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* Mensagem de Vitória */
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+}
+
+.winning-message-button {
+    font-size: 2.5rem;
+    background-color: rgb(1, 18, 255);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    color: white;
+}
+
+.winning-message-button:hover {
+    color: rgb(230, 255, 4);
+    background-color: white;
+}
+
+.winning-message-text {
+    color: white;
+    font-size: 5rem;
+}
+
+.show-winning-message {
+    display: flex;
+}
+
+/* Rodapé Profissional */
+.footer {
+    background-color: #0c34e9;
+    color: white;
+    padding: 50px 20px;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f1c40f;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    line-height: 1.0;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Redes sociais */
+.social ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social ul li a {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.social ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444444;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .winning-message-text {
+        font-size: 3rem;
+    }
+    .winning-message-button {
+        font-size: 2rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .social ul {
+        justify-content: center;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 480px) {
+    .cell {
+        width: 60px;
+        height: 60px;
+    }
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    .winning-message-text {
+        font-size: 2rem;
+    }
+    .winning-message-button {
+        font-size: 1.5rem;
+    }
+    .footer-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+}

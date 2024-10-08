@@ -1,0 +1,130 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #2e4dff, #3b009b); /* Gradiente de fundo */
+    color: #000000;
+    padding: 20px;
+}
+
+/* Estilo do título principal */
+h1 {
+    font-size: 2.5em;
+    color: #000000;
+}
+
+/* Estilos para o contêiner da logo */
+#logo-container {
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+}
+
+#logo {
+    max-width: 200px; /* Largura máxima da logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Contêiner principal do jogo */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilos para o contêiner do canvas */
+#canvas-container {
+    border: 2px solid #000000;
+    margin-bottom: 20px;
+}
+
+/* Contêiner da palavra */
+#word-container {
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    margin-bottom: 20px;
+}
+
+/* Contêiner das letras */
+#letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para as letras */
+.letter {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    font-size: 1.5em;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover para as letras */
+.letter:hover {
+    background-color: #2b2b2b; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilos para as letras já usadas */
+#used-letters {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Mensagem de erro ou status do jogo */
+#message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: red;
+}
+
+/* Estilos para o botão de reiniciar */
+#reset-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #5900ff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Efeito hover para o botão de reiniciar */
+#reset-btn:hover {
+    background-color: #2200e0;
+}
+
+/* Estilos para o botão Shift */
+#shift-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Efeito hover para o botão Shift */
+#shift-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    margin-top: 200px; /* Espaçamento acima do rodapé */
+    font-size: 1em; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo levemente transparente */
+    border-radius: 4px; /* Bordas arredondadas */
+    width: 100%; /* Largura completa */
+    position: fixed; /* Fixa o rodapé na parte inferior */
+    bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background: linear-gradient(50deg, rgb(23, 66, 158), rgb(196, 138, 31));
+    position: relative;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%; /* Alinha o conteúdo ao centro */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Ocupa toda a largura da tela */
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center; /* Centraliza o placar */
+    gap: 20px; /* Espaço entre os placares dos jogadores */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.square.dark {
+    background-color: #8B4513; /* tom de madeira escura */
+}
+
+.square.light {
+    background-color: #DEB887; /* tom de madeira clara */
+}
+
+.piece {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.piece.black {
+    background-color: black;
+}
+
+.piece.white {
+    background-color: white;
+}
+
+.selected {
+    border: 2px solid yellow;
+}
+
+.controls {
+    position: absolute;
+    right: 20px; /* Alinha os botões à direita da tela */
+    top: 100px; /* Alinha os botões ao topo, ajustado para alinhar com o tabuleiro */
+    display: flex;
+    flex-direction: column;
+}
+
+.controls button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 02px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer-content {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+}

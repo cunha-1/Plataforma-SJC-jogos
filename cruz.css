@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(75deg, green, blue);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#image-selector{
+    background-color: yellow;
+    cursor:pointer;
+    border: none;
+}
+
+#image-selector:hover{
+    color: blue;
+}
+
+#start-button{
+    background-color: blue;
+    color: white;
+    cursor:pointer;
+    border: none;
+}
+
+#start-button :hover{
+    color:yellow;
+}
+
+#puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 0; /* Remove o espaço entre as peças */
+    margin-bottom: 20px;
+}
+
+label{
+    color:white;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; /* Para cobrir toda a área com a imagem */
+    background-position: center; /* Centraliza a imagem dentro da peça */
+    box-sizing: border-box; /* Inclui bordas no cálculo de largura e altura */
+}
+
+#message {
+    font-size: 20px;
+    color: green;
+    text-align: center; /* Centraliza o texto da mensagem */
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #5ae310;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+footer p { 
+    color: rgb(0, 0, 0);
+}

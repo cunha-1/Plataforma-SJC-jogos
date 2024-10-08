@@ -1,0 +1,197 @@
+/* Estilo geral da página */
+body {
+    font-family: 'Merriweather', serif; /* Fonte atualizada */
+    background-color: #a8e6cf; /* Cor de fundo verde limão */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #5c4033; /* Marrom escuro */
+    text-shadow: 1px 1px 2px #2c1b0f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Contêiner do jogo */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 15px;
+    justify-items: center;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff; /* Fundo branco para o contêiner do jogo */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para o contêiner */
+}
+
+/* Estilo das cartas */
+.card {
+    width: 120px;
+    height: 120px;
+    background-color: #8b5e34; /* Marrom médio */
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s;
+    perspective: 1000px; /* Para efeito 3D */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do conteúdo das cartas */
+.card-back, .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background-color: #d7b49e; /* Tom claro de madeira */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+}
+
+/* Verso da carta */
+.card-back {
+    background-color: #8b5e34; /* Mesma cor do fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #fff;
+    /* Opcional: Adicionar uma imagem ou ícone no verso */
+    /* background-image: url('path_to_back_image.jpg'); */
+    /* background-size: cover; */
+}
+
+/* Classe para virar a carta */
+.card.flipped .card-front {
+    transform: rotateY(0deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(180deg);
+}
+
+/* Container da mensagem motivacional */
+#motivational-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 241, 224, 0.95); /* Fundo semi-transparente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#motivational-message.hidden {
+    display: none;
+}
+
+#motivational-text {
+    font-size: 1.5em;
+    color: #5c4033;
+    margin-bottom: 20px;
+}
+
+#play-again {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #8b5e34;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-again:hover {
+    background-color: #5c4033;
+}
+
+/* Estilo do botão Reset */
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #5c4033;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #3e2b20;
+}
+
+/* Estilo do footer */
+footer {
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #8b5e34;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .game-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-gap: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #motivational-text {
+        font-size: 1.2em;
+    }
+
+    #reset-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    #play-again {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}

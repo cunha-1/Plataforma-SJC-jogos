@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(45deg, navy,white); 
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #683c3c31; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: "Pacifico", cursive;
+    background: linear-gradient(90deg, #ff0000, #0707ff); /* Gradiente desejado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+}
+
+.question {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3d07ff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #3d07ff; 
+}
+
+.button-container {
+    margin-top: 20px; 
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5em; 
+    text-align: center;
+    color: #28a745; 
+}
+
+footer {
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: rgba(11, 152, 247, 0.9); 
+    width: 100%; 
+    position: relative;
+    margin: 0; /* Remove margens do rodapé */
+    left: 0; /* Para garantir que ele comece do lado esquerdo */
+    right: 0; /* Para garantir que ele se estenda até o lado direito */
+}
+
+.footer-content {
+    font-size: 1em; 
+    color: #000000; 
+    margin: 0; /* Remover margens para melhor centralização */
+    padding: 5px; 
+    width: 100%; /* Faz o conteúdo ocupar toda a largura do rodapé */
+    box-sizing: border-box; /* Para incluir padding no cálculo da largura */
+}
+
+
+
+footer p {
+    color: #ffffff;
+    margin: 5px 0; /* Adicionar margem para espaçamento */
+}
+
+.logo {
+    display: block; 
+    margin: 20px auto; 
+    max-width: 100%; 
+    height: auto; 
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória - São João Calábria</title>
+    <!-- Link para a fonte Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="memoria.css">
+    <style>
+        body {
+            position: relative; /* Para posicionar a logo dentro do body */
+        }
+
+        .logo {
+            position: absolute; /* Para permitir o posicionamento no canto superior esquerdo */
+            top: 20px; /* Distância do topo */
+            left: 20px; /* Distância da esquerda */
+            max-width: 100px; /* Ajuste a largura da logo conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+            z-index: 100; /* Garante que a logo fique acima de outros elementos */
+        }
+    </style>
+</head>
+<body>
+    <img src="memoria.png" alt="Logo" class="logo">
+
+    <h1>Jogo da Memória - São João Calábria</h1>
+
+    <div class="game-container">
+        <!-- Cartas duplicadas para formar pares -->
+        <!-- Par 1 -->
+        <div class="card" data-name="calabria1">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria1.jpg" alt="São João Calábria 1">
+            </div>
+        </div>
+        <div class="card" data-name="calabria1">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria1.jpg" alt="São João Calábria 1">
+            </div>
+        </div>
+        <!-- Par 2 -->
+        <div class="card" data-name="calabria2">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria2.webp" alt="São João Calábria 2">
+            </div>
+        </div>
+        <div class="card" data-name="calabria2">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria2.webp" alt="São João Calábria 2">
+            </div>
+        </div>
+        <!-- Par 3 -->
+        <div class="card" data-name="calabria3">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria3.png" alt="São João Calábria 3">
+            </div>
+        </div>
+        <div class="card" data-name="calabria3">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria3.png" alt="São João Calábria 3">
+            </div>
+        </div>
+        <!-- Par 4 -->
+        <div class="card" data-name="calabria4">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria4.jpg" alt="São João Calábria 4">
+            </div>
+        </div>
+        <div class="card" data-name="calabria4">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria4.jpg" alt="São João Calábria 4">
+            </div>
+        </div>
+        <!-- Par 5 -->
+        <div class="card" data-name="calabria5">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria5.jpg" alt="São João Calábria 5">
+            </div>
+        </div>
+        <div class="card" data-name="calabria5">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria5.jpg" alt="São João Calábria 5">
+            </div>
+        </div>
+        <!-- Par 6 -->
+        <div class="card" data-name="calabria6">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria6.jpg" alt="São João Calábria 6">
+            </div>
+        </div>
+        <div class="card" data-name="calabria6">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria6.jpg" alt="São João Calábria 6">
+            </div>
+        </div>
+        <!-- Par 7 -->
+        <div class="card" data-name="calabria7">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria7.jpg" alt="São João Calábria 7">
+            </div>
+        </div>
+        <div class="card" data-name="calabria7">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria7.jpg" alt="São João Calábria 7">
+            </div>
+        </div>
+        <!-- Par 8 -->
+        <div class="card" data-name="calabria8">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria8.jpg" alt="São João Calábria 8">
+            </div>
+        </div>
+        <div class="card" data-name="calabria8">
+            <div class="card-back"></div>
+            <div class="card-front">
+                <img src="memoria8.jpg" alt="São João Calábria 8">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Reset abaixo do jogo -->
+    <button id="reset-button">Resetar Jogo</button>
+
+    <!-- Container para a mensagem motivacional -->
+    <div id="motivational-message" class="hidden">
+        <p id="motivational-text"></p>
+        <button id="play-again">Jogar Novamente</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Feito por Igor Alexandre
+    </footer>
+
+    <script src="memoria.js"></script>
+</body>
+</html>
